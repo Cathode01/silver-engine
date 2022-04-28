@@ -118,7 +118,7 @@ void drawscreen(){ //draws image from 2d arrays
             for(int z=0; z<16; z++){
             for(int x=320; x>0; x--){
                 for(int y=200; y>0; y--){
-                    if (screenarray[x][y][z] != G){ //foreground array gets first priority for drawing on screen.
+                    if (screenarray[x][y][z] != G){ //higher z varible gets first priority for drawing on screen.
                         glPointSize(wdh);
                         glBegin(GL_POINTS);
                         glColor3f(rLUT[screenarray[x][y][z]], gLUT[screenarray[x][y][z]], bLUT[screenarray[x][y][z]]);
